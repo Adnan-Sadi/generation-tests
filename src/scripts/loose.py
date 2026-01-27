@@ -4,6 +4,9 @@ import json
 import re
 from openai import OpenAI
 
+# --------------------------------------------------------------------------------
+# Configuration
+# --------------------------------------------------------------------------------
 # Colors
 CYAN   = '\033[96m'
 GREEN  = '\033[92m'
@@ -14,8 +17,13 @@ RESET  = '\033[0m'
 llm_url = os.getenv("LLM_URL", "http://localhost:8000/v1")
 llm_key = os.getenv("LLM_KEY", "TOKEN")
 
-MODEL = "phi3.5-mini" # phi3-buddy | phi3.5-mini | qwen2.5-3b | qwen2.5-3b-speculative | qwen2.5-0.5b
+# MODEL SELECTION
+# Options: phi3-buddy | phi3.5-mini | qwen2.5-3b | qwen2.5-3b-speculative | qwen2.5-0.5b
+MODEL = "phi3.5-mini" 
 
+# --------------------------------------------------------------------------------
+# System Prompt
+# --------------------------------------------------------------------------------
 SYSTEM_PROMPT = """
 ROLE: You are Buddy, a warm, friendly robot built by Indiana University. You love listening to stories about the past.
 
@@ -42,6 +50,9 @@ Respond ONLY with a valid JSON object containing:
 - "message": An initial draft of the response.
 """
 
+# --------------------------------------------------------------------------------
+# Manual JSON Parser
+# --------------------------------------------------------------------------------
 def clean_and_parse_json(raw_text):
     # 1. Try to parse directly
     try: return json.loads(raw_text)
@@ -64,6 +75,9 @@ def clean_and_parse_json(raw_text):
     # Failed to parse
     return None 
 
+# --------------------------------------------------------------------------------
+# Get a response from the LLM
+# --------------------------------------------------------------------------------
 def get_response(client, user_prompt):
     print(f"{CYAN}Sending request...{RESET}")
     
@@ -106,7 +120,7 @@ def get_response(client, user_prompt):
         print(f"{e}")
 
 # --------------------------------------------------------------------------------
-# Function calls
+# Server Calls
 # --------------------------------------------------------------------------------
 print(f"{YELLOW}Attempting connection to: {llm_url}...{RESET}")
 print(f"{YELLOW}Model endpoint: {MODEL} {RESET}\n")

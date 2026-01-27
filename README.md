@@ -1,6 +1,8 @@
 # generation-tests
 Scripts developed for testing different models and generation methods on our cloud-GPU hosted LLM server.
 
+Available models: `phi3-buddy` | `phi3.5-mini` | `qwen2.5-3b` | `qwen2.5-3b-speculative` | `qwen2.5-0.5b`
+
 <details closed> <summary>How to run</summary>
 
 * SSH into one of our CPU instances

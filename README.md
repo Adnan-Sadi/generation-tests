@@ -16,15 +16,16 @@ Testing different generation methods with the cloud GPU hosted LLM instance.
 
 ### Sample Outputs:
 <figure>
-  <img src="images/yes-critique.png" alt="Output sample with critique">
   <figcaption>Sample script output WITH `critique` and `final_output` fields.</figcaption>
+  <img src="images/yes-critique.png" alt="Output sample with critique">
+  
 </figure>
 
 <br>
 
 <figure>
-  <img src="images/no-critique.png" alt="Output sample with no critique">
   <figcaption>Sample script output WITHOUT `critique` and `final_output` fields (faster).</figcaption>
+  <img src="images/no-critique.png" alt="Output sample with no critique">
 </figure>
 
 

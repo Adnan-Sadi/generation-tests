@@ -58,7 +58,7 @@ def get_response(client, user_prompt):
 
         # Print model response
         print(f"{CYAN}--- MODEL RESPONSE ({duration:.2f}s) ---{RESET}")
-        print(f"{YELLOW}User:    {user_prompt}")
+        print(f"{YELLOW}User:     {user_prompt}")
         print(f"{GREEN}Message: {RESET}{content}")
         print(f"{CYAN}-------------------------------{RESET}\n")
         

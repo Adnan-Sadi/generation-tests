@@ -88,6 +88,7 @@ def get_response(client, user_prompt):
         t1 = time.time()
         duration = t1 - t0
         
+        # Print model response
         print(f"{CYAN}--- MODEL RESPONSE ({duration:.2f}s) ---{RESET}")
         print(f"{YELLOW}User:        {user_prompt}")
         print(f"{GREEN}Intent:     {RESET} {response.user_intent}")
@@ -104,6 +105,9 @@ def get_response(client, user_prompt):
         print(f"{CYAN}--- ERROR ---{RESET}")
         print(f"{e}")
 
+# --------------------------------------------------------------------------------
+# Function calls
+# --------------------------------------------------------------------------------
 print(f"{YELLOW}Attempting connection to: {llm_url}...{RESET}")
 print(f"{YELLOW}Model endpoint: {MODEL} {RESET}\n")
 

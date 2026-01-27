@@ -69,9 +69,9 @@ Testing different generation methods with the cloud GPU hosted LLM instance.
 |                        DOCKER CONTAINER                       |
 |                                                               |
 |   +-----------------+                     +---------------+   |
-|   |  Instructor/    |  --- (Schema) --->  |               |   |
-|   |  OpenAI Client  |                     |   LLM SERVER  |   |
-|   |                 |  <-- (JSON) ------  |   (Port 8080) |   |
+|   |  Instructor/    |  --- (Schema) --->  |  LLM SERVER   |   |
+|   |  OpenAI Client  |                     |  (Port 8080)  |   |
+|   |                 |  <-- (JSON) ------  |               |   |
 |   +--------+--------+                     +---------------+   |
 |            |                                                  |
 |            v                                                  |

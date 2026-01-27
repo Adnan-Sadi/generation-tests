@@ -1,5 +1,5 @@
 # generation-tests
-Testing different generation methods with the cloud GPU hosted LLM instance. 
+Scripts developed for testing different models and generation methods on our cloud-GPU hosted LLM server.
 
 <details closed> <summary>How to run</summary>
 

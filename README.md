@@ -11,7 +11,6 @@ Testing different generation methods with the cloud GPU hosted LLM instance.
 </details>
 
 
-<br>
 <hr>
 
 ### Sample Outputs:
